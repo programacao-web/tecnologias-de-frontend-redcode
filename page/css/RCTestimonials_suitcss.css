@@ -1,0 +1,18 @@
+
+.RCTestimonials{
+  visibility: hidden;
+}
+
+.RCTestimonials-title,
+.RCTestimonials-first {
+  display: block;
+  visibility: visible;
+}
+
+@custom-media --wide-screen (min-width: 1100px);
+
+@media (--wide-screen) {
+  .RCTestimonials{
+    text-align: center;
+  }
+}
