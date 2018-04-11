@@ -1,0 +1,14 @@
+header{
+    @include align-items(center);
+    @include justify-content(space-between);
+    background-color: $menu-color;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    left: 0;
+    position: fixed;
+    text-decoration: none;
+    top: 0;
+    width: 100%;
+}

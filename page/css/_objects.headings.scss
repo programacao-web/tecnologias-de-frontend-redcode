@@ -1,0 +1,6 @@
+.header-logo img {
+    @include justify-content(flex-start);
+    height: 50px;
+    margin-left: 3px;
+    width: 90px;
+}
