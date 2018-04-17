@@ -79,14 +79,6 @@ header {
   width: 50%;
   height: 50%; }
 
-.testimonials {
-  visibility: hidden; }
-
-.testimonials-title,
-.testimony-one {
-  display: block;
-  visibility: visible; }
-
 .testimony-author {
   font-style: italic; }
 

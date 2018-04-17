@@ -77,14 +77,18 @@
 
             <div class="testimonials">
                 <h1 class="testimonials-title">Testimonials</h1>
-                <div class="testimony-one">
+                <div class="testimony">
                     <p class="testimony-text">Etiam leo nisl, feugiat a ante eu, faucibus elementum odio.</p>
                     <p class="testimony-author">Jhon Doe</p>
                 </div>
-                <div class="testimony-two">
+                <div class="testimony">
                     <p class="testimony-text">Nunc venenatis scelerisque metus non elementum.</p>
                     <p class="testimony-author">Mary Doe</p>
                 </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="nextSlide()">&#10094;</a>
+                <a class="next" onclick="previousSlide()">&#10095;</a>
             </div>
         </main>
         <footer>
@@ -100,7 +104,35 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
 
+        	setInterval(function(){nextSlide()}, 3*1000)
+            function nextSlide(){
+                showSlides(slideIndex += 1)
+            }
+
+            function previousSlide(){
+                showSlides(slideIndex -= 1)
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("testimony");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex-1].style.display = "block";
+
+            }
+        </script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
@@ -113,7 +145,7 @@
             function myFunction() {
                 var x = document.getElementById("nav-menu")
                 console.log(x)
-                console.log(x.className)                
+                console.log(x.className)
                 if (x.className === "header-menu") {
                     x.className += " responsive";
                 } else {
