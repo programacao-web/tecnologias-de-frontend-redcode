@@ -1,0 +1,15 @@
+.testimonials{
+    visibility: hidden;
+}
+
+.testimonials-title,
+.testimony-one{
+    display: block;
+    visibility: visible;
+}
+
+@media (min-width: 1100px) {
+    .testimonials{
+        text-align: center;
+    }
+}

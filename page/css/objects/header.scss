@@ -1,0 +1,42 @@
+header{
+    @include justify-content(space-between);
+    @include align-items(center);
+    align-items: center;
+    background-color: $header-color;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: $header-height;
+    left: 0;
+    position: fixed;
+    text-decoration: none;
+    top: 0;
+    width: $header-width;
+}
+
+.header-logo img {
+    @include justify-content(flex-start);
+    height: 50px;
+    margin-left: 3px;
+    width: 90px;
+}
+
+#header-menu {
+    @include flex-wrap(wrap);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    font-size: 1.2rem;
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+#header-menu a {
+    border-bottom: solid 2px white;
+    padding-bottom: 5px;
+    color: $menu-font-color;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+}
