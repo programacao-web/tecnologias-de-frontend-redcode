@@ -20,7 +20,7 @@ header{
     width: 90px;
 }
 
-#header-menu {
+.header-menu {
     @include flex-wrap(wrap);
     display: flex;
     float: right;
@@ -30,7 +30,7 @@ header{
     padding-left: 5px;
 }
 
-#header-menu a {
+.header-menu a {
     // border-bottom: solid 2px white;
     padding-bottom: 5px;
     color: $menu-font-color;
@@ -40,19 +40,24 @@ header{
     display: none;
 }
 
-#header-menu a.icon {
+.header-menu a.icon {
+    float: right;
+    display: block;
+}
+
+.header-menu.responsive a{
     float: right;
     display: block;
 }
 
 @media (min-width: 1100px){
-    #header-menu {
+    .header-menu {
         font-size: 1.5rem;
     }
-    #header-menu a{
+    .header-menu a{
         display: block;
     }
-    #header-menu a.icon {
+    .header-menu a.icon {
         display: none;
     }
 }
