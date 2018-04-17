@@ -13,8 +13,6 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/RCHeader.css">
-        <link rel="stylesheet" href="css/RCTestimonials.css">
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -22,20 +20,21 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header class="RCHeader">
-            <div class="RCHeader-logo">
+        <header>
+            <div class="header-logo">
                 <img src="img/logo.png" alt="Company Logo">
             </div>
-            <nav id="nav-menu">
-                <ul class="RCHeader-menu">
+            <nav>
+                <ul id="header-menu">
                     <li><a href="">Home</a></li>
                     <li><a href="">How it works</a></li>
                     <li><a href="">Get started</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
                 </ul>
             </nav>
         </header>
-        <div class="RCHeader-hero" id="hero-element">
-            <h1>VOTE</h1>
+        <div id="hero-element">
+            <img src="img/hero.jpg" alt="Vote Now">
             <h3>The most incredible voting system!</h3>
         </div>
         <main>
@@ -76,15 +75,15 @@
                 </div>
             </div>
 
-            <div class="RCTestimonials testimony-section">
-                <h1 class="RCTestimonials-title">Testimonials</h1>
-                <div class="RCTestimonials-first testimony">
+            <div class="testimonials">
+                <h1 class="testimonials-title">Testimonials</h1>
+                <div class="testimony-one">
                     <p class="testimony-text">Etiam leo nisl, feugiat a ante eu, faucibus elementum odio.</p>
-                    <p class="testimony-author"><i>Jhon Doe</i></p>
+                    <p class="testimony-author">Jhon Doe</p>
                 </div>
-                <div class="testimony">
+                <div class="testimony-two">
                     <p class="testimony-text">Nunc venenatis scelerisque metus non elementum.</p>
-                    <p class="testimony-author"><i>Mary Doe</i></p>
+                    <p class="testimony-author">Mary Doe</p>
                 </div>
             </div>
         </main>
